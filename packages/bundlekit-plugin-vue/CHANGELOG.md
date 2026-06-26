@@ -1,5 +1,11 @@
 # @bundlekit/plugin-vue
 
+## 0.0.15
+
+### Patch Changes
+
+- bf9d868: 更新模版 UI
+
 ## 0.0.14
 
 ### Patch Changes
