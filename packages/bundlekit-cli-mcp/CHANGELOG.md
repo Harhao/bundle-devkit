@@ -1,5 +1,11 @@
 # @bundlekit/cli-mcp
 
+## 0.1.16
+
+### Patch Changes
+
+- @bundlekit/cli@0.0.21
+
 ## 0.1.15
 
 ### Patch Changes

@@ -4,15 +4,143 @@ const App: React.FC = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <h1>
-        <span>Hello, <%= projectName %>!</span>
-        <button onClick={() => setCount(count + 1)}>
-          Clicked {count} times
+    <div style={styles.container}>
+      <div style={styles.card}>
+        <div style={styles.logo}>
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="12" fill="url(#grad)" />
+            <path
+              d="M14 24L22 32L34 16"
+              stroke="white"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="48" y2="48">
+                <stop stopColor="#6366f1" />
+                <stop offset="1" stopColor="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 style={styles.title}>
+          Hello,{" "}
+          <span style={styles.projectName}><%= projectName %></span>!
+        </h1>
+        <p style={styles.subtitle}>
+          Your project is ready. Start building something amazing.
+        </p>
+        <button
+          style={styles.button}
+          onClick={() => setCount(count + 1)}
+        >
+          🚀 Clicked {count} times
         </button>
-      </h1>
+        <div style={styles.links}>
+          <a
+            href="https://bundlekit.dev"
+            target="_blank"
+            rel="noreferrer"
+            style={styles.link}
+          >
+            📖 Documentation
+          </a>
+          <a
+            href="https://github.com/nicepkg/bundlekit"
+            target="_blank"
+            rel="noreferrer"
+            style={styles.link}
+          >
+            ⭐ GitHub
+          </a>
+        </div>
+      </div>
+      <p style={styles.footer}>
+        Built with{" "}
+        <a
+          href="https://bundlekit.dev"
+          target="_blank"
+          rel="noreferrer"
+          style={styles.footerLink}
+        >
+          BundleKit
+        </a>
+      </p>
     </div>
   );
+};
+
+const styles: Record<string, React.CSSProperties> = {
+  container: {
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "linear-gradient(135deg, #f0f0ff 0%, #e8e0ff 50%, #f0e8ff 100%)",
+    fontFamily: "system-ui, -apple-system, sans-serif",
+    padding: "2rem",
+  },
+  card: {
+    background: "white",
+    borderRadius: "1.5rem",
+    padding: "3rem",
+    boxShadow:
+      "0 20px 60px rgba(99, 102, 241, 0.1), 0 4px 20px rgba(0, 0, 0, 0.05)",
+    textAlign: "center",
+    maxWidth: "28rem",
+    width: "100%",
+  },
+  logo: { marginBottom: "1.5rem" },
+  title: {
+    fontSize: "1.75rem",
+    fontWeight: 700,
+    color: "#1e1b4b",
+    margin: "0 0 0.5rem 0",
+  },
+  projectName: {
+    background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  },
+  subtitle: {
+    color: "#6b7280",
+    fontSize: "1rem",
+    margin: "0 0 2rem 0",
+    lineHeight: 1.6,
+  },
+  button: {
+    background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+    color: "white",
+    border: "none",
+    borderRadius: "0.75rem",
+    padding: "0.75rem 2rem",
+    fontSize: "1rem",
+    fontWeight: 600,
+    cursor: "pointer",
+    boxShadow: "0 4px 14px rgba(99, 102, 241, 0.4)",
+  },
+  links: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "1.5rem",
+    marginTop: "2rem",
+    paddingTop: "1.5rem",
+    borderTop: "1px solid #f3f4f6",
+  },
+  link: {
+    color: "#6366f1",
+    textDecoration: "none",
+    fontSize: "0.875rem",
+    fontWeight: 500,
+  },
+  footer: { marginTop: "2rem", color: "#9ca3af", fontSize: "0.875rem" },
+  footerLink: {
+    color: "#6366f1",
+    textDecoration: "none",
+    fontWeight: 600,
+  },
 };
 
 export default App;
