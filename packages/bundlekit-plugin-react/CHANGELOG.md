@@ -1,5 +1,11 @@
 # @bundlekit/plugin-react
 
+## 0.0.16
+
+### Patch Changes
+
+- 8a8e52f: 修正演示模版文件引入问题处理
+
 ## 0.0.15
 
 ### Patch Changes
