@@ -86,6 +86,7 @@ ${context}`,
                   content: input,
                 },
               ],
+              max_tokens: 4096,
             }),
           }
         )

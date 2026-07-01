@@ -18,6 +18,9 @@ export const docsAgent = new Agent({
     - Explain technical concepts in a clear, beginner-friendly manner
   `,
   model: 'openai/gpt-4o',
+  defaultGenerateOptionsLegacy: {
+    maxTokens: 4096,
+  },
   tools: {
     docsQueryTool,
   },

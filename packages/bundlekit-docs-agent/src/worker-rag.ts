@@ -99,6 +99,7 @@ ${context}`,
             content: question,
           },
         ],
+        max_tokens: 4096,
       }),
     }
   )
@@ -137,7 +138,8 @@ ${context}`,
             content: question,
           },
         ],
-        stream: true, // 启用流式输出
+        stream: true,
+        max_tokens: 4096,
       }),
     }
   )
